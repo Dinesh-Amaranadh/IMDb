@@ -1,0 +1,21 @@
+#root {
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+  background-color: rgb(166, 207, 243);
+  padding: 0 15px;
+  font-size: 15px;
+  
+}
+.header ul{
+  display: flex;
+  gap: 1em;
+}
+.header ul li{
+  list-style: none;
+}
