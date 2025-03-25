@@ -19,3 +19,43 @@
 .header ul li{
   list-style: none;
 }
+.movie {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  width: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.movie img{
+  height: 250px;
+}
+
+.movie-list{
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+.movie-list-page {
+  padding: 0px 10px;
+}
+.pagination {
+  display: flex;
+  
+}
+.pagination button {
+  padding: 5px 10px;
+  border-color: rgb(161, 159, 159);
+  background-color: rgb(66, 65, 65);
+  border-radius: 5px;
+  color: white;
+}
+.pagination button.active {
+  background-color: rgb(166, 207, 243);
+  color: black;
+}
+.pagination-section{
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+}
