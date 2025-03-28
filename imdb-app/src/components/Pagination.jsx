@@ -1,11 +1,28 @@
-import { useState } from "react";
-const Pagination = ({ onPageChange }) => {
-    const [pages, setPages] = useState([1, 2, 3, 4, 5]);
-    const [selectedPage, setSelectedPage] = useState(0);
+import { useEffect, useState } from "react";
+const Pagination = ({ onPageChange,totalPages }) => {
+    const [pages, setPages] = useState([]);
+    const [selectedPage, setSelectedPage] = useState(1);
+    const [totalPagesCount, setTotalPagesCount] = useState();
+    const THRESHOLD = 10;
+    const setNewPagesList = (pageNo) => {
+        
+        const startPage = Math.max(1, pageNo - Math.ceil(THRESHOLD / 2)+1);
+
+        const endPage = Math.min(totalPages, startPage + THRESHOLD -1);
+        
+        const newPages = Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i);
+        setPages(newPages);
+    }
+
     const handleClick = (pageNo) => {
         onPageChange(pageNo);
         setSelectedPage(pageNo);
+        setNewPagesList(pageNo);
     }
+    useEffect(() =>{
+        const list = Array.from({length: Math.min(totalPages,THRESHOLD)}, (_, i) => i + 1)
+        setPages(list);
+    },[totalPages]);
     return (
 
         <div className="pagination">
