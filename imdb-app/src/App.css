@@ -59,9 +59,87 @@
   justify-content: center;
   margin: 0 10px;
 }
+.container {
+  display : flex;
+  gap: 1em;
+  padding: 10px 50px;
+  margin-top: 50px;
+  
+}
+.container .left-side {
+  display:  flex;
+  width: 20%;
+  
 
+}
+.container .right-side {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  
+}
+.search{
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+  padding: 0 10px;
+  height: 25px;
+}
 
+.watchListTable {
+  
+  border-collapse: collapse;
+  text-align: center;
+}
+.watchListTable th {
+  background-color: rgb(81, 122, 158);
+  padding: 10px;
+}
 
+.watchListTable img {
+  width: 80px;
+  
+}
+.watchListTable button {
+  background-color: rgb(81, 122, 158);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.watchListTable button:hover {
+  background-color: rgb(166, 207, 243);
+  color: black;
+}
+.sorting {
+  display: flex;
+  justify-content: space-between;
+}
+.sorting img {
+  height: 20px;
+  width: 20px;
+}
+
+.genre-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.genre {
+  border: 1px solid #0a0909;
+  background-color: rgb(166, 207, 243);
+  padding: 5px;
+  border-radius: 2px;
+  margin: 5px 0;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  color: black;
+}
+.genre:hover {
+  background-color: rgb(81, 122, 158);
+  color: rgb(235, 227, 227);
+}
 
 
 
