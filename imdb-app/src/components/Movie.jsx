@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import  { WatchListContext } from '../assets/contexts/WatchListContext';
 
-const Movie = ({movie, watchList, setWatchList}) => {
+const Movie = ({movie}) => {
+    const watchListContextData = useContext(WatchListContext);
+    const { watchList, setWatchList } = watchListContextData;
     const handleWatchListClick = () => {
         if(watchList[movie.id]) {
             const newWatchList = {...watchList};

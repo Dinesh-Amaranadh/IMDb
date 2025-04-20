@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import './../App.css';
+import { WatchListContext } from "../assets/contexts/WatchListContext.jsx";
 
 
 let genreids = {
@@ -23,7 +24,9 @@ let genreids = {
     10752: "War",
     37: "Western",
 };
-const WatchListPage = ({ watchList, setWatchList }) => {
+const WatchListPage = () => {
+    const watchListContextData = useContext(WatchListContext);
+    const { watchList, setWatchList } = watchListContextData;
     const [list, setList] = useState([]);
     const handleMovieSearch = (e) => {
         // console.log(e.target.value.toLowerCase());

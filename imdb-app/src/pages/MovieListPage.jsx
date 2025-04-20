@@ -3,7 +3,7 @@ import MovieList from "../components/MovieList.jsx";
 import Pagination from "../components/Pagination.jsx";
 
 
-const MovieListPage = ({watchList ,setWatchList}) => {
+const MovieListPage = () => {
     const [movies, setMovies] = useState([]);
     const [totalPages,setTotalPages] = useState();
     const fetchMovies = (pageNo) => {
@@ -23,7 +23,7 @@ const MovieListPage = ({watchList ,setWatchList}) => {
         <div className="movie-list-page">
 
             <h1>Movie List Page</h1>
-            <MovieList movies={movies} watchList={watchList} setWatchList={setWatchList} />
+            <MovieList movies={movies} />
             <div className="pagination-section">
                 <Pagination onPageChange={fetchMovies} totalPages={totalPages} />
             </div>
